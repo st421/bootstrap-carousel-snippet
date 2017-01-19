@@ -1,0 +1,13 @@
+<script>
+/*
+ * Makes sure the page doesn't jump around by sizing the carousel's div
+ * relative to the first picture in the slides.
+*/
+jQuery(document).ready(function() {
+	var ratio = 1.5;
+	jQuery('.carousel-inner img').css('max-height',jQuery('.carousel-inner').width()/ratio);
+	jQuery(window).resize(function() {
+		jQuery('.carousel-inner img').css('max-height', jQuery('.carousel-inner').width()/ratio);
+	});
+});
+</script>
